@@ -1,0 +1,176 @@
+%==============================================================================
+% Template research proposal bachelor thesis
+%==============================================================================
+
+\documentclass[dutch]{hogent-article}
+
+\usepackage{lipsum} % For blind text
+
+\usepackage{float}
+% Specify bibliography file
+\addbibresource{references.bib}
+
+% Information about the study programme, course, assignment
+\studyprogramme{Professionele bachelor toegepaste informatica}
+\course{Bachelorproef}
+\assignmenttype{Onderzoeksvoorstel}
+\academicyear{2023-2024}
+
+% TODO (phase 1): Working title
+\title{Optimalisatie van AI Integratie in Webapplicaties: Onderzoek naar AI Oplossingen en Integratietechnieken}
+
+% TODO (phase 1): Student name and email address
+\author{Matthis Van Hoecke}
+\email{matthis.vanhoecke@student.hogent.be}
+
+% TODO (phase 1): Give the link to your Github-repository here
+\projectrepo{https://github.com/HoGentTIN/rm-2223-en-paper-rmnenakhovvanhoecke}
+
+% Within which specialization from the final year of the study programme
+% is this research situated? Choose from this list:
+%
+% - Mobile \& Enterprise development
+% - AI \& Data Engineering
+% - Functional \& Business Analysis
+% - System \& Network Administrator
+% - Mainframe Expert
+% - If the research does not fit within one of these domains, specify it
+%   yourself
+%
+\specialisation{Mobile \& Enterprise developer}
+% Enter some keywords here that describe your topic
+\keywords{Artificiële Intelligentie, Webapplicaties, Integratietechnieken}
+
+
+\begin{document}
+
+\begin{abstract}
+  
+  De markt van AI oplossingen groeit enorm sterk. Deze oplossingen zijn echter niet direct
+bruikbaar voor eindgebruikers. Vaak moeten deze oplossingen geïntegreerd worden binnen
+webapplicaties. Vandaag is dit soort van integraties nog niet vanzelfsprekend. Er komen
+echter steeds meer integratieoplossingen voor handen.
+  
+  \setlength{\parskip}{1em}
+  
+  Binnen deze bachelorproef onderzochten we welke groepen van AI oplossingen er
+bestaan en welke integratietechnieken we kunnen aanwenden om deze bruikbaar te maken
+binnen webapplicaties. Hierbij komen termen als Langchain, Llama index, Tensorflow, Vector
+databases, WebAssembly, en nog een aantal anderen om de hoek kijken. Met het resultaat van dit onderzoek
+zouden architecten en developers sneller in staat moeten zijn om AI oplossingen te
+integreren in bestaande en nieuwe webapplicaties.
+  
+ Om de haalbaarheid van de implementatie van deze technieken te onderzoeken, zal de onderzoeker een praktische aanpak nemen. Hierbij wordt een webapplicatie ontwikkeld die gebruik zal maken van de gevonden technieken in dit onderzoek.
+  
+  De resultaten tonen aan dat de diverse onderzochte integratietechnieken wel degelijk geïmplementeerd kunnen worden in webapplicaties voor gebruik van de eindgebruikers. 
+  Aan de hand van deze vondsten kunnen we zeggen dat developers met gebruik van deze technieken, zelf artificiële Intelligentie kunnen implementeren in hun applicaties. 
+  Alhoewel dit onderzoek gebruikmaakt van verschillende soorten technieken, is het belangerijk om te vermelden dat er alternatieven beschikbaar zijn die mogelijk beter passen bij de soort applicatie dat ontwikkeld wordt.
+
+\end{abstract}
+
+\tableofcontents
+
+\bigskip
+
+% TODO: Are you also taking on the Bachelor's thesis this year? Then uncomment
+% the text below and adjust it as appropriate.
+
+%\paragraph{Remark}
+
+% I'm also taking up the bachelor's thesis this year. The content of this research proposal also serves as the subject for my bachelor thesis. My promoter is (Mr./Mrs.) X.\ Surname.
+
+
+% Describe any differences and/or improvements in this document compared to your research proposal that you submitted for the Bachelor's thesis.
+
+\section{Inleiding}%
+\label{sec:Introduction}
+
+% TODO: (phase 1) introduce your chosen topic, formulate the research question and sub-questions. What is the objective (is it S.M.A.R.T.?), what will be the result of the research (a Proof-of-Concept, a prototype, an advice, ...)? Why is it useful to research this topic?
+
+De hoeveelheid artificiële intelligentie (AI) groeit enorm snel, maar het toegankelijk maken van deze oplossingen voor eindgebruikers blijft een uitdaging. Een cruciale rol in het toegankelijk maken van AI wordt toegekend aan webapplicaties.
+  \setlength{\parskip}{1em}
+  
+  Dergelijke applicaties zijn de meest gebruikte en meest toegankelijke vorm van applicaties.\linebreak
+  Daarom, wanneer men spreekt over het verbeteren van de toegankelijkheid van artificiële intelligentie, staan webapplicaties hier centraal. Hoewel er al veel soorten AI-oplossingen zijn, blijft het integreren hiervan niet zo evident.
+  
+  In veel gevallen zal de complexiteit van integratie afhangen van het type AI dat men wil implementeren. Een Large Language Model (LLM), gebruikt voor tekstgeneratie en het beantwoorden van vragen, zou bijvoorbeeld makkelijker te implementeren zijn dan een Convolutional Neural Network (CNN) voor het herkennen van foto- en videobeelden. De reden hiervoor is dat een LLM vaak voorgetraind is. Een CNN kan ook voorgetraind zijn, maar moet vaak aangepast worden aan de specifieke toepassing om ze geschikt te maken voor de gewenste beeldherkenning.
+  
+  De voortdurend evoluerende technologie introduceert continu nieuwe AI-oplossingen en integratiemogelijkheden, maar het is moeilijk om te bepalen welke het beste passen bij specifieke applicaties. 
+  
+  Vanuit dit idee kwam A.C.A. Group met de vraag voor dit onderzoek. Men moet de nodige AI-oplossingen en integratietechnieken kunnen identificeren en achterhalen of deze geïmplementeerd kunnen worden in bestaande en nieuwe applicaties. De uitdaging ligt in het vinden van de juiste tools die niet alleen op papier goed lijken te passen, maar die ook effectief kunnen worden toegepast in verschillende applicaties van A.C.A. Group. 
+  
+  Hieruit ontstaat de centrale vraag welke integratiemogelijkheden het meest geschikt zijn bij het implementeren van AI-oplossingen in een webapplicatie. In dit onderzoek gaat de auteur daarom eerst de AI-oplossingen en integratiemogelijkheden van die oplossingen identificeren aan de hand van een uitgebreide literatuurstudie, waarin de auteur zal bepalen welke groepen de hoogste kwaliteit garanderen voor de laagst mogelijke prijs.
+  
+  De auteur start het onderzoek met de literatuurstudie, gevolgd door een toelichting op de methodologie. Vervolgens worden de resultaten van deze zaken besproken, waarna de auteur het onderzoek afsluit met een algemene conclusie.
+  
+
+\section{Literatuurstudie}%
+\label{sec:literature review}
+% TODO: (phase 3-4) write out the literature review and use references to authoritative professional literature where appropriate.
+
+% Use the following commands to cite references:
+% \autocite{BIBTEXKEY} -> (Author, year)
+% \textcite{BIBTEXKEY} -> Author (year)
+
+The authors found numerous studies related to diagnosing depressive disorder. These studies included methods such as analysing facial expressions, tone of voice and text messages, as well as a more expensive method of using blood-oxygen-level-dependent (BOLD) response estimated from event-related signals and resting-state functional magnetic resonance imaging (fMRI) signals together.
+
+The study analysing facial expressions found that people with depressive disorder recognized facial expressions faster than individuals without the disorder. The study states the following: “Results showed that the high-depression group, in comparison with the low-depression group, recognized facial expressions faster and with comparable accuracy” \autocite[7]{Wu2012}.
+
+To determine the disorder using tone of voice, one study analysed 35 participants that were diagnosed with a depressive disorder and found a significant difference in tone before and after treatment. This research suggests: “[...] several objective voice acoustic measures affected by depression can be obtained reliably over the telephone” \parencite[3]{Mundt2007}. This suggests that an AI model could use these measures as a useful tool for diagnosing depression.
+
+Following this, some researchers found that text messages could be used to diagnose a depressive disorder as well \autocite{Ahmed2022}. The study mentions a certain AI model was given a large portion of data from using questionnaires to retrieving data from certain online communities to diagnose individuals with the disorder on social media based on their posts and their use of language.
+
+The last study was conducted using an invasive method of the use of blood-oxygen levels and therefore will not be used in this research. \autocite{Lu2012}
+
+Based on the studies shown above, the researchers can conclude that there are many possible ways to diagnose depressive disorder. But would AI be able to apply these methods in the real world? To answer that question, the authors found a relatively new study that indicates that it might be possible.
+
+It was found that the AI algorithm, Random Forests, had a sensitivity and precision of 90\% and 89\% respectively \autocite{SouzaFilho2021}, indicating that it is possible to apply the methods used by professionals to an AI model with a high percentage of accuracy.
+
+
+\section{Methodologie}%
+\label{sec:methodology}
+
+% TODO: (phase 5) describe in detail which phases your research can be divided into, how long each phase lasts and what the concrete result of each phase is. What research technique will you use to answer each of your research questions? Do you use experiments, questionnaires, simulations for this? You also describe which tools you intend to use or develop for this. Include a flowchart or Gantt-chart to illustrate your planning.
+
+The goal of this section is to describe how to conduct a comparative study that evaluates the effectiveness of AI-enabled behavioural analysis versus human diagnosis in depression screening. The authors will examine if AI analysis is more accurate than doctors through several phases, each with specific objectives and deliverables.
+
+The first phase will be data collected by a swift literature review and provides a description of the current state of mental health screening and diagnosis for depressive disorder. The authors will determine the requirements for a perfect mental health screening and establish the criteria for evaluating the effectiveness between AI-enabled systems and human diagnosis. The existing methods will be reviewed and their difficulties and limitations will be identified. During 2 weeks the authors will deliver a description of the current situation related to depression diagnosis and a clearly defined set of requirements for the comparative study.
+
+The second phase will cover the approaches and tools, considering both AI-enabled behaviour\-al analysis and human diagnosis methods. Three weeks will be required to perform a deep literature review during this phase. The review can help to find already existing AI-based mental health screeners and machine learning frameworks that can be used as a base for those screeners. It can also provide an already-tested accuracy comparison and conduct some ethical and security problems when using AI for mental health screening.
+
+After acquiring a long list of tools and approa\-ches the authors will spend 2 weeks narrowing it down and assessing which will prove to be most effective for our research. As a result, the shortlist with ``M'' and ``S'' (according to the MoSCoW system) will create a base for the comparative study.
+
+Proof-of-concept, the fourth phase, which also takes 2 weeks, aims to show the effectiveness of the chosen AI-based approach for mental health screening ``Random Forests''. This phase involves developing a small-scale version of the suggested solution, collecting data from the assessments created by professionals and the chosen AI, reviewing the data, and applying appropriate statistical methods to evaluate the data.
+
+The next phase covers the conclusion and future recommendations based on outcomes obtained during the Proof-of-concept, there can be 2 expected results: the AI-enabled system is more effective than professionals in depression screening, or vice versa. Regardless of the conclusion, future recommendations can suggest refining the AI algorithms and models to improve their performance and reduce false positive/negative answers or explore the potential benefits of combining AI analysis and the knowledge of mental health professionals will be beneficial to our society.
+
+\section{Te verwachten resultaten}%
+\label{sec:expected-results}
+
+% TODO: (phase 6) describe what you expect from your research and why (e.g. according to your literature search software package A is the most used and you think it will be most suitable for this case). Of course you can't look into the future and you can't rule out alternative possibilities. In practice, it often happens that research leads to surprising results, which makes the process even more interesting!
+
+This study aims to test the effectiveness of Random Forests in detecting depression in individuals. The authors are going to compare the performance of Random Forests with that of human doctors in diagnosing depression. The hypothesis is that the AI algorithm will perform as well as or better than the doctors in screening for depression.
+
+The hypothesis will be tested by using statistical tests such as t-tests or chi-square tests to determine whether the two methods have significant differences. These tests will indicate if the differences are real and not random. The study thinks that the AI algorithm will have an advantage over human diagnosis, but the statistical analysis will verify or disprove this idea. If the results demonstrate that Random Forests are as accurate or more accurate than human doctors in detecting depression, it will endorse the use of AI-enabled behavioural analysis as a way to enhance clinical decision-making.
+
+
+
+\section{Discussie, conclusie}%
+\label{sec:discussion-conclusion}
+In conclusion, the study has demonstrated that AI and ML algorithms can analyze large data sets to detect depression based on linguistic, multimodal, and neural network methods. These algorithms can be trained to recognize depression symptoms based on predefined indicator variables. This suggests that behavioural analysis using AI models can be a useful tool for mental health screening, offering more speed and accuracy.
+
+However, the study also highlights the need for human expertise to verify and interpret AI results. While AI analysis shows promise in detecting disorders, human diagnosis remains crucial for personalized and comprehensive assessments. The cooperation between humans and artificial intelligence systems can enhance data analysis and improve mental health screening. This cooperation will open up new possibilities for AI in mental healthcare.
+
+Further research and validation of AI-based methods in mental health screening will help promote effective and inclusive practices.
+
+
+
+%------------------------------------------------------------------------------
+% Bibliography
+%------------------------------------------------------------------------------
+% TODO: (phase 4) the referenced works must be in a BibTeX file references.bib.
+% Use JabRef to edit the bibliography file.
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
